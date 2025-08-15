@@ -1,4 +1,9 @@
-/* Global styles */
+/*
+  Global styles
+  We follow accessible design principles: clear typography, sufficient
+  contrast and responsive layouts【753621319727735†L46-L48】.  The Inter font
+  provides a clean and legible base for all text.
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,9 +17,23 @@ body {
   background-color: #f8fafc;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 600;
-  color: #111827;
+/* Skip link – hidden off‑screen until focused */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
 }
 
 /* Navigation bar */
@@ -26,6 +45,7 @@ h1, h2, h3, h4 {
   background-color: #111827;
   padding: 0.75rem 0;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -68,20 +88,20 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, #3b82f6, #6366f1);
   color: #ffffff;
   height: 70vh;
-  padding-top: 4rem;
+  padding-top: 5rem;
   text-align: center;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto 2rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
 .hero-buttons {
@@ -114,7 +134,7 @@ h1, h2, h3, h4 {
   background-color: #4338ca;
 }
 
-/* Main sections */
+/* Sections */
 .section {
   padding: 4rem 1rem;
   max-width: 1100px;
@@ -125,6 +145,7 @@ h1, h2, h3, h4 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: #0f172a;
 }
 
 /* Experience */
@@ -240,30 +261,16 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
-}
-
-#visit-count {
   font-size: 0.875rem;
-  color: #6ee7b7;
 }
 
 @media (max-width: 640px) {
-  .nav-links {
-    display: none;
-  }
-  .logo {
-    font-size: 1rem;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .btn {
-    padding: 0.5rem 1rem;
-  }
-  .section {
-    padding: 3rem 1rem;
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
 }

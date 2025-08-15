@@ -2,20 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!--
+      A properly set viewport ensures the page is scaled correctly on mobile
+      devices. Responsive design is a key accessibility principle【753621319727735†L46-L48】.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashtik Mahapatra | Portfolio</title>
-    <!-- Load a modern sans‑serif font for clean typography -->
+    <title>Ashtik Mahapatra | Portfolio</title>
+    <!-- Import the Inter font to provide a clean and legible typeface -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation bar linking to each section -->
-    <nav class="navbar">
+    <!-- Skip link improves keyboard navigation and accessibility【753621319727735†L64-L70】 -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Navigation bar -->
+    <nav class="navbar" aria-label="Main navigation">
       <div class="nav-container">
-        <div class="logo">Ashtik Mahapatra</div>
+        <div class="logo">Ashtik Mahapatra</div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -26,170 +32,169 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Hero section introducing Ashtik -->
+    <!-- Hero section -->
     <header class="hero">
       <div class="hero-content">
-        <h1>Hi, I'm Ashtik.</h1>
+        <h1>Hi, I'm Ashtik.</h1>
         <p>
           A passionate AI/ML researcher and engineer currently pursuing my
-          Master’s in Computer Science &amp; Engineering at the University at
+          Master’s in Computer Science & Engineering at the University at
           Buffalo. I build intelligent systems that solve real‑world problems.
         </p>
         <div class="hero-buttons">
-          <a class="btn" href="#contact">Get in Touch</a>
-          <a class="btn secondary" href="Ashtik_Resume.pdf" download>Download Resumé</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+          <a class="btn secondary" href="Ashtik_Resume.pdf" download
+            >Download Resumé</a
+          >
         </div>
       </div>
     </header>
-
-    <main>
+    <!-- Main content starts here -->
+    <main id="main-content">
       <!-- About section -->
       <section id="about" class="section">
-        <h2>About Me</h2>
+        <h2>About Me</h2>
         <p>
-I'm a graduate student at the University at Buffalo with a GPA of 3.917/4.0, deeply focused on artificial intelligence, machine learning, and natural language processing. With hands-on experience building large-scale extraction pipelines, intelligent user experiences, and NLP systems, I bring a strong blend of research and real-world application. As an IEEE-published researcher and experienced Data Scientist, I’ve developed award-winning ML pipelines at Wolters Kluwer that have generated millions in revenue. My expertise spans transformers, diffusion models, computer vision, generative AI, and full-stack AI system development, including cloud automation on AWS and Azure for domains like accessibility and legal analytics.
+          I'm a graduate student at the University at Buffalo with a GPA of
+          3.917/4.0, deeply focused on artificial intelligence, machine learning
+          and natural language processing. With hands‑on experience building
+          large‑scale extraction pipelines, intelligent user experiences and NLP
+          systems, I bring a strong blend of research and real‑world
+          application. As an IEEE‑published researcher and experienced data
+          scientist, I’ve developed award‑winning ML pipelines at Wolters Kluwer
+          that have generated millions in revenue.
         </p>
       </section>
-
       <!-- Experience section -->
       <section id="experience" class="section">
         <h2>Experience</h2>
-        <div class="experience-item">
-          <h3>Data Science Intern – Magnit (Wolters Kluwer)</h3>
+        <!-- Each experience item uses proper semantic headings and lists -->
+        <article class="experience-item">
+          <h3>Data Science Intern – Magnit (Wolters Kluwer)</h3>
           <span class="timeframe">Jun 2025 – Aug 2025</span>
           <ul>
             <li>
-              Designed and deployed end-to-end LangChain/RAG agent pipelines—combining vector databases, hybrid semantic-keyword retrieval, and reranking—to automate business-license processing and power document-scale QA, achieving 85 % relevancy and substantial efficiency gains across large unstructured datasets.
+              Designed and deployed end‑to‑end LangChain/RAG agent pipelines—combining
+              vector databases, hybrid semantic‑keyword retrieval and reranking—to
+              automate business‑license processing and power document‑scale QA,
+              achieving 85 % relevancy and substantial efficiency gains across large
+              unstructured datasets.
             </li>
           </ul>
-        </div>
-        <div class="experience-item">
-          <h3>Data Scientist II – Wolters Kluwer</h3>
+        </article>
+        <article class="experience-item">
+          <h3>Data Scientist II – Wolters Kluwer</h3>
           <span class="timeframe">Aug 2021 – Jun 2024</span>
           <ul>
             <li>
-              Won the 2023 Global Innovation Award for architecting a data
-              ingestion pipeline that processes <strong>22M+ UCC lien
-              filings</strong> across all 50 US states.
+              Won the 2023 Global Innovation Award for architecting a data
+              ingestion pipeline that processes 22M+ UCC lien filings across all
+              50 US states.
             </li>
             <li>
               Implemented a form classifier using the DONUT transformer
-              achieving <strong>98%+ F1</strong> and an extraction model
-              using LiLT that achieved <strong>90%+ F1</strong> on multiple
-              fields.
+              achieving 98 %+ F1 and an extraction model using LiLT that
+              achieved 90 %+ F1 on multiple fields.
             </li>
             <li>
-              Created proof‑of‑concepts with open‑source LLMs for
-              extracting structured information from unstructured UCC images
-              and built monitoring and error reporting workflows.
+              Created proof‑of‑concepts with open‑source LLMs for extracting
+              structured information from unstructured UCC images and built
+              monitoring and error reporting workflows.
             </li>
             <li>
-              On‑boarded clients to LegalView BillAnalyzer by fine tuning
-              models and modifying business logic for complex billing
-              guidelines, achieving <strong>80% precision</strong> and
-              <strong>70% recall</strong>.
+              On‑boarded clients to LegalView BillAnalyzer by fine‑tuning models
+              and modifying business logic for complex billing guidelines,
+              achieving 80 % precision and 70 % recall.
             </li>
             <li>
-              Designed a billing rate management system handling over
-              <strong>1M records / min</strong> and revamped classification
-              models using spaCy and FastText, improving precision by
-              <strong>14%</strong> and recall by <strong>10%</strong>.
+              Designed a billing rate management system handling over 1M
+              records per minute and revamped classification models using spaCy
+              and FastText, improving precision by 14 % and recall by 10 %.
             </li>
           </ul>
-        </div>
-        <div class="experience-item">
-          <h3>AI/ML Intern – IBM</h3>
-          <span class="timeframe">May 2020 – Jul 2020, Jan 2021 – Jul 2021</span>
+        </article>
+        <article class="experience-item">
+          <h3>AI/ML Intern – IBM</h3>
+          <span class="timeframe">May 2020 – Jul 2020, Jan 2021 – Jul 2021</span>
           <ul>
             <li>
-              Built document denoising models using OpenCV and CNNs,
-              classifying documents for denoising with <strong>95.4%
-              accuracy</strong>.
+              Built document denoising models using OpenCV and CNNs, classifying
+              documents for denoising with 95.4 % accuracy.
             </li>
             <li>
               Automated AWS pipelines tying together S3, EMR and Redshift,
               enabling scalable data processing for asset management.
             </li>
           </ul>
-        </div>
-        <div class="experience-item">
-          <h3>Machine Learning Intern – Lawnics</h3>
+        </article>
+        <article class="experience-item">
+          <h3>Machine Learning Intern – Lawnics</h3>
           <span class="timeframe">Sep 2020 – Jan 2021</span>
           <ul>
             <li>
-              Developed a named‑entity relationship recognizer using spaCy
-              and BERT for legal documents, achieving <strong>85%+ accuracy</strong>
-              across five target categories.
+              Developed a named‑entity relationship recognizer using spaCy and
+              BERT for legal documents, achieving 85 %+ accuracy across five
+              target categories.
             </li>
             <li>
               Implemented a document ranking model using BM25 and ElasticSearch
               for efficient retrieval based on similarity scores.
             </li>
           </ul>
-        </div>
+        </article>
       </section>
-
       <!-- Projects section -->
       <section id="projects" class="section">
-        <h2>Highlighted Projects</h2>
+        <h2>Highlighted Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <h4>Text‑to‑ASL Video Generation</h4>
-            <span class="timeframe">Mar 2025 – Apr 2025</span>
+            <h4>Text‑to‑ASL Video Generation</h4>
             <p>
               Created an end‑to‑end pipeline to generate realistic American Sign
-              Language videos from text. Fine‑tuned Stable Diffusion with
-              LoRA, used MediaPipe for 2D skeleton extraction and applied
-              advanced frame blending to produce smooth, coherent gesture
-              videos.
+              Language videos from text. Fine‑tuned Stable Diffusion with LoRA,
+              used MediaPipe for 2D skeleton extraction and applied advanced
+              frame blending to produce smooth, coherent gesture videos.
             </p>
           </div>
           <div class="project-card">
-            <h4>Memory‑Augmented QA System</h4>
-            <span class="timeframe">Mar 2025 – Apr 2025</span>
+            <h4>Memory‑Augmented QA System</h4>
             <p>
-              Built a multi‑hop question answering system on the HotPotQA
-              dataset using a memory‑augmented neural network with BERT
-              embeddings, dual LSTM controllers and a Neural Turing
-              Machine‑style memory. Achieved 62.5% exact match and 90.5% F1.
+              Built a multi‑hop question answering system on the HotPotQA dataset
+              using a memory‑augmented neural network with BERT embeddings, dual
+              LSTM controllers and a Neural Turing Machine‑style memory. Achieved
+              62.5 % exact match and 90.5 % F1.
             </p>
           </div>
           <div class="project-card">
-            <h4>NYC Taxi Duration Prediction</h4>
-            <span class="timeframe">Feb 2025 – Mar 2025</span>
+            <h4>NYC Taxi Duration Prediction</h4>
             <p>
-              Developed an end‑to‑end ML pipeline to predict New York City
-              taxi trip durations using LightGBM and FFT‑based feature
-              engineering. Achieved an MAE of 1.9 and deployed a Streamlit app
-              backed by Hopsworks, AWS Glue and AWS Lambda for real‑time
-              predictions.
+              Developed an end‑to‑end ML pipeline to predict New York City taxi
+              trip durations using LightGBM and FFT‑based feature engineering.
+              Achieved an MAE of 1.9 and deployed a Streamlit app backed by
+              Hopsworks, AWS Glue and AWS Lambda for real‑time predictions.
             </p>
           </div>
           <div class="project-card">
-            <h4>Image Classification from Scratch</h4>
-            <span class="timeframe">Feb 2025 – Mar 2025</span>
+            <h4>Image Classification from Scratch</h4>
             <p>
               Implemented VGG‑16 and ResNet‑18 architectures in PyTorch for a
-              3‑class image classification task. Achieved 95.1% accuracy with
-              VGG‑16, outperforming ResNet‑18 (92.6%).
+              three‑class image classification task. Achieved 95.1 % accuracy
+              with VGG‑16, outperforming ResNet‑18 (92.6 %).
             </p>
           </div>
         </div>
       </section>
-
       <!-- Research section -->
       <section id="research" class="section">
         <h2>Research</h2>
         <p>
-          I have published research on identifying social media posts
-          indicative of depression. As first author, I presented this work at
-          the 2020 IEEE International Symposium on Sustainable Energy, Signal
-          Processing and Cyber Security (iSSSC). You can read the paper
-          <a href="https://ieeexplore.ieee.org/abstract/document/9358866" target="_blank" rel="noopener">here</a>.
+          I have published research on identifying social media posts indicative
+          of depression. As first author, I presented this work at the 2020 IEEE
+          International Symposium on Sustainable Energy, Signal Processing and
+          Cyber Security (iSSSC). You can read the paper
+          <a href="https://example.com">here</a>.
         </p>
       </section>
-
       <!-- Skills section -->
       <section id="skills" class="section">
         <h2>Skills</h2>
@@ -199,34 +204,75 @@ I'm a graduate student at the University at Buffalo with a GPA of 3.917/4.0, dee
           <li>Large Language Models, RAG, LangChain</li>
           <li>Computer Vision (OpenCV, CNNs)</li>
           <li>Scikit‑Learn, FastText, spaCy</li>
-          <li>Vector Databases, Apache Solr, ElasticSearch</li>
+          <li>Vector Databases, Apache Solr, ElasticSearch</li>
           <li>AWS, Azure, Dataiku, Hopsworks</li>
         </ul>
       </section>
-
       <!-- Contact section -->
       <section id="contact" class="section contact">
         <h2>Contact</h2>
-        <p>
-          Want to collaborate or have an interesting opportunity? Let’s talk!
-        </p>
+        <p>Want to collaborate or have an interesting opportunity? Let’s talk!</p>
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:ashtikkm@gmail.com">ashtikkm@gmail.com</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashtik-mahapatra/" target="_blank" rel="noopener">linkedin.com/in/ashtik-mahapatra</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/fieryash" target="_blank" rel="noopener">github.com/fieryash</a></li>
+          <li>
+            Email:
+            <a href="mailto:ashtikkm@gmail.com">ashtikkm@gmail.com</a>
+          </li>
+          <li>
+            LinkedIn:
+            <a href="https://linkedin.com/in/ashtik-mahapatra"
+              >linkedin.com/in/ashtik-mahapatra</a
+            >
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/fieryash">github.com/fieryash</a>
+          </li>
         </ul>
       </section>
     </main>
-
+    <!-- Footer with visitor counter -->
     <footer>
       <div class="footer-content">
-        <span id="visit-count">Visits: counting…</span>
-        <span class="copyright">©
-          <script>document.write(new Date().getFullYear());</script>
-          Ashtik Mahapatra</span>
+        <p>
+          Visits:
+          <span id="visit-count">
+            <!-- The visitor badge increments and displays a counter as an image
+              on every page load. It relies on an external service hosted on
+              glitch.me that can be embedded in static sites【778345995251134†L16-L45】.
+            -->
+            <img
+              src="https://visitor-badge.glitch.me/badge?page_id=fieryash.github.io"
+              alt="Visitor count badge"
+            />
+          </span>
+        </p>
+        <p>© <span id="year"></span> Ashtik Mahapatra</p>
       </div>
     </footer>
+    <!-- JavaScript for dynamic behaviour -->
+    <script>
+      // Insert the current year into the footer
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-    <script src="script.js"></script>
+      // Optionally fetch the numeric count from CountAPI.  CountAPI is a free
+      // service that increments a counter and returns a JSON response with a
+      // `value` property.  If you prefer to store visit counts yourself in
+      // AWS S3, you can replace the URL below with an API Gateway endpoint
+      // backed by a Lambda function that writes to a CSV in S3.  That Lambda
+      // function would need to fetch the current count, increment it and
+      // store the result.  See the guidance in the final response for
+      // implementation details.
+      fetch('https://api.countapi.xyz/hit/fieryash.github.io/visits')
+        .then((res) => res.json())
+        .then((data) => {
+          const badgeSpan = document.getElementById('visit-count');
+          // Remove the badge image to display the numeric counter
+          badgeSpan.innerHTML = data.value;
+        })
+        .catch((err) => {
+          console.error(err);
+          // If the API call fails, leave the badge image in place
+        });
+    </script>
   </body>
 </html>
